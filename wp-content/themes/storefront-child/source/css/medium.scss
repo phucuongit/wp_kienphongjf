@@ -1,7 +1,9 @@
 @import "./medium/general.scss";
+@import "./medium/footer.scss";
 @media (max-width: 767px) {
     @import "./medium/home";
 }
+
 @media (min-width: 768px) {
     @import "./medium/768up";
 }
