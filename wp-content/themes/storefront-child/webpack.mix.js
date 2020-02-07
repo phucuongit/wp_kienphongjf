@@ -12,7 +12,8 @@ let mix = require('laravel-mix');
  */
 
 mix
-    .js('assets/js/app.js', 'dist/js').sass('assets/css/app.scss', 'dist/css')
+    // .js('source/js/app.js', 'dist/js')
+    .sass('source/css/app.scss', 'dist/css')
     .sourceMaps()
     .disableNotifications()
     .autoload({});
