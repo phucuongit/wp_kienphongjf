@@ -11,7 +11,7 @@ function enqueue_parent_styles() {
         array( $parent_style ),
         wp_get_theme()->get('Version')
     );
-    wp_enqueue_style('boostrap-css', get_stylesheet_directory_uri() . '/dist/css/bootstrap.min.css', array($parent_style), wp_get_theme()->get('Version'));
+    wp_enqueue_style('boostrap-css', get_stylesheet_directory_uri() . '/dist/css/bootstrap.css', array($parent_style), wp_get_theme()->get('Version'));
 
     wp_enqueue_style('app-css', get_stylesheet_directory_uri() . '/dist/css/app.css', array($parent_style), wp_get_theme()->get('Version'));
 }

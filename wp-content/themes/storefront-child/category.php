@@ -1,7 +1,7 @@
 <?php
 /* Page News */
 ?>
-<?php get_header(); ?>
+<?php get_header();?>
 <div class="container row">
 
     <div class="news-list-content-left news-list col-lg-9 col-md-12">
@@ -40,9 +40,9 @@
 
                         </div>
                     </div>
-                   
+
                 </div>
-                
+
             </div>
             <!-- news-panel-content -->
         </div>
@@ -51,8 +51,9 @@
     </div>
 
     <div class="news-list-content-right col-lg-3 col-md-12">
-        <?php get_sidebar(); ?>
+        <div class="hero-sidebar">
+            <?php get_sidebar(); ?>
+        </div>
     </div>
-
 </div>
 <?php get_footer();?>
