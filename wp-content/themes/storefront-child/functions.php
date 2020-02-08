@@ -70,7 +70,27 @@ function remove_action_storeFront(){
 	remove_action('homepage', 'storefront_homepage_content', 10);
 	remove_action('homepage', 'storefront_product_categories', 20);
     remove_action('homepage', 'storefront_best_selling_products', 70);
-    
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+
+	// change priority of hook woocommerce_template_single_price
+	// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+	// add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 60);
+
 }
 add_action( 'init',  'remove_action_storeFront', 10);
 
+// Disable product review (tab)
+function woo_remove_product_tabs($tabs) {
+unset($tabs['reviews']); 					// Remove Reviews tab
+
+	return $tabs;
+}
+
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function add_inquiry_link_instead_price( $price, $product ) {
+    if ( '' === $product->get_price() || 0 == $product->get_price() ) :
+        return '<p class="price--button">Call</p>';
+    endif;
+}
+add_filter( 'woocommerce_get_price_html', 'add_inquiry_link_instead_price', 100, 2 );

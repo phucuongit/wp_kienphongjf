@@ -1,4 +1,4 @@
-.storefront-products-bycategory .panel-header-pagehome {
+.panel-header-pagehome {
   background-color: #e6e9ed;
   color: #003e70;
   padding: 5px 0;
@@ -10,6 +10,7 @@
   box-sizing: border-box;
   font-size: 20px;
   line-height: 35px;
+  margin-bottom: 5px;
 }
 
 .storefront-products-bycategory a.woocommerce-loop-product__link:hover {
@@ -45,6 +46,34 @@
 .news-info {
   float: left;
   width: 80%;
+}
+
+/* SINGLE PRODUCT */
+
+.posted_in,
+.tagged_as,
+.sku_wrapper {
+  font-size: 14px;
+}
+
+.posted_in .sku,
+.tagged_as .sku,
+.sku_wrapper .sku {
+  font-weight: normal;
+}
+
+nav.storefront-product-pagination {
+  display: none;
+}
+
+.price--button {
+  color: #c70404;
+  font-size: 20px;
+}
+
+.single-product div.product .product_meta {
+  padding-top: unset !important;
+  border-top: none !important;
 }
 
 @media (min-width: 1200px) {
