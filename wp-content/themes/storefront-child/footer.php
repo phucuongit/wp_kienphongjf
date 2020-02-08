@@ -12,6 +12,7 @@
             <!-- </div> -->
             <!-- .col-full -->
             <!-- <div class="col-lg-4 col-md-12">
+
                     hello
             </div> -->
         <!-- </div> -->

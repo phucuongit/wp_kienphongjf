@@ -58,10 +58,11 @@
 	do_action( 'storefront_before_content' );
 	?>
 
+
 	<!-- <div id="content" class="site-content" tabindex="-1">
         <div class="container row">
             <div class="col-lg-8 col-md-12"> -->
-
+			
             <?php
             //do_action( 'storefront_content_top' );
             
