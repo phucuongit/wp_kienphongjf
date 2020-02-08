@@ -59,8 +59,8 @@
 	?>
 
 	<div id="content" class="site-content" tabindex="-1">
-        <div class="container row">
-            <div class="col-lg-8 col-md-12">
+        <div class="container row" style="margin:auto">
+            <div class="col-lg-9 col-md-12">
 
             <?php
             do_action( 'storefront_content_top' );

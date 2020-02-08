@@ -11,7 +11,7 @@
 ?>
 
             </div><!-- .col-full -->
-            <div class="col-lg-4 col-md-12">
+            <div class="col-lg-3 col-md-12">
                     hello
             </div>
         </div><!-- .col-container -->
@@ -29,3 +29,7 @@
 	<?php do_action( 'storefront_after_footer' ); ?>
 
 </div><!-- #page -->
+<?php wp_footer() ?>
+
+</body>
+</html>
