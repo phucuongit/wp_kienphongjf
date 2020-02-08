@@ -9,12 +9,15 @@
 
 ?>
 
-            </div><!-- .col-full -->
-            <div class="col-lg-4 col-md-12">
+            <!-- </div> -->
+            <!-- .col-full -->
+            <!-- <div class="col-lg-4 col-md-12">
                     hello
-            </div>
-        </div><!-- .col-container -->
-	</div><!-- #content -->
+            </div> -->
+        <!-- </div> -->
+        <!-- .col-container -->
+	<!-- </div> -->
+    <!-- #content -->
 
 	<?php do_action( 'storefront_before_footer' ); ?>
 
