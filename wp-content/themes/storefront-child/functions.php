@@ -82,7 +82,7 @@ add_action( 'init',  'remove_action_storeFront', 10);
 // Disable product review (tab)
 function woo_remove_product_tabs($tabs) {
 unset($tabs['reviews']); 					// Remove Reviews tab
-
+	echo 'test';
 	return $tabs;
 }
 
