@@ -76,6 +76,49 @@ nav.storefront-product-pagination {
   border-top: none !important;
 }
 
+ul.products li.product a.woocommerce-LoopProduct-link {
+  text-decoration: none;
+}
+
+/*
+    CSS BLOCK PANEL
+*/
+
+.panel {
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.panel .panel_header {
+  background-color: #e6e9ed;
+  padding: 5px 0;
+  padding-left: 10px;
+  font-weight: normal;
+  min-height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.panel .panel_header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 32px;
+  margin-bottom: 0;
+  color: #003e70;
+}
+
+.panel .note {
+  color: #FF2222;
+  font-size: 11px;
+  width: 100%;
+}
+
+.panel .panel_content {
+  padding: 10px;
+  overflow: hidden;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1300px;
