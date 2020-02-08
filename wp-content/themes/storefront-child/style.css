@@ -83,7 +83,10 @@ body {
 .news-info a {
     text-decoration: none;
 }
-/****/
+/* SIDEBAR */
+.hero-sidebar .panel-header{
+    font-size: 18px;
+}
 #search-panel {
     display: block;
     margin-bottom: 20px;
@@ -125,24 +128,24 @@ body {
 .panel-header i {
     padding-right: 10px;
 }
-#support_online .account {
+#support-online .account {
     padding: 10px;
 }
-#support_online .name {
+#support-online .name {
     font-size: 15px;
     margin-bottom: 5px;
     border-bottom: 1px dotted #eee;
 }
-#support_online .sky {
+#support-online .sky {
     float: left;
     margin-right: 10px;
 }
-#support_online .phone {
+#support-online .phone {
     color: #a90000;
     font-size: 15px;
     line-height: 30px;
 }
-#support_online .account:first-child{padding-bottom:0px}
+#support-online .account:first-child{padding-bottom:0px}
 /***SẢN PHẨM PHỔ BIẾN **/
 #list-product-hot img {
     width: 100%;
