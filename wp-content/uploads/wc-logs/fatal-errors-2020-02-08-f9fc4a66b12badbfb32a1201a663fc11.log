@@ -1,0 +1,16 @@
+2020-02-08T14:36:56+00:00 CRITICAL Call to undefined function page_nav() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 101
+
+2020-02-08T15:24:46+00:00 CRITICAL Call to a member function get_price_html() on null in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 26
+
+2020-02-08T15:28:09+00:00 CRITICAL Call to a member function get_price_html() on null in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 30
+
+2020-02-08T16:08:07+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 44
+
+2020-02-08T16:08:48+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 61
+
+2020-02-08T16:12:43+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 41
+
+2020-02-08T16:13:00+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 41
+
+2020-02-08T17:03:11+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\search.php on line 51
+

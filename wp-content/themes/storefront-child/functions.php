@@ -94,3 +94,39 @@ function add_inquiry_link_instead_price( $price, $product ) {
     endif;
 }
 add_filter( 'woocommerce_get_price_html', 'add_inquiry_link_instead_price', 100, 2 );
+
+function teaser($limit) {
+	$excerpt = explode(' ', get_the_excerpt(), $limit);
+	if (count($excerpt)>=$limit) {
+		array_pop($excerpt);
+		$excerpt = implode(" ",$excerpt).'[...]';
+	} else {
+		$excerpt = implode(" ",$excerpt);
+	}
+	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
+	if ($limit > 200) {
+		$excerpt.= '...';
+	}
+	return $excerpt;
+}
+
+//Code phan trang
+function devvn_wp_corenavi($custom_query = null, $paged = null) {
+    global $wp_query;
+    if($custom_query) $main_query = $custom_query;
+    else $main_query = $wp_query;
+    $paged = ($paged) ? $paged : get_query_var('paged');
+    $big = 999999999;
+    $total = isset($main_query->max_num_pages)?$main_query->max_num_pages:'';
+    if($total > 1) echo '<div class="pagenavi">';
+    echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, $paged ),
+        'total' => $total,
+        'mid_size' => '10', // Số trang hiển thị khi có nhiều trang trước khi hiển thị ...
+        'prev_text'    => __('Prev','devvn'),
+        'next_text'    => __('Next','devvn'),
+    ) );
+    if($total > 1) echo '</div>';
+}
