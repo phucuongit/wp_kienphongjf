@@ -14,7 +14,18 @@
 
 get_header(); ?>
 <div class="container row">
+	<section class="col-12 banner--slide">
+		
+		<?php 
+		/**
+		 * @include inc/slideBanner.php
+		 * @hook create_slider 10
+		 */
+		do_action('homeSlide') ?>
+	</section>
+
 	<div class="col-lg-9 col-md-12">
+		
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
 
