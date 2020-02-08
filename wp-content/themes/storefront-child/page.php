@@ -39,6 +39,7 @@ get_header(); ?>
         </div>
         <div class="col-lg-3 col-md-12">
                 <?php do_action( 'storefront_sidebar' ); ?>
+                'tesst'
         </div>
     </div>
 	</div><!-- #primary -->
