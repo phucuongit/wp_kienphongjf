@@ -16,3 +16,126 @@
     display: inline-block;
     width: 100%;
 }
+/***/
+body {
+    font: 14px/22px 'roboto', Arial, Tahoma, sans-serif;
+    color: #313131;
+}
+.container {
+    width: 1500px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.news-list-content-left {
+    float: left;
+    width: 80%;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+.news-list-content-right {
+    float: left;
+    box-sizing: border-box;
+    width: 20%;
+}
+.news-list-content-left .panel, .news-list-content-right .panel{
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+.news-list-content-left .news-panel-header {
+    background-color: #e6e9ed;
+    color: #003e70;
+    padding: 5px 0;
+    padding-left: 10px;
+    font-weight: normal;
+    min-height: 40px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 0px;
+}
+.news-list-content-left .news-panel-content {
+    padding: 10px;
+    overflow: hidden;
+}
+.news-list-content-left .news-item {
+    padding: 10px 0;
+    overflow: hidden;
+    border-bottom: 1px dashed #D8D8D8;
+}
+.news-image {
+    float: left;
+    margin: 0px 10px 4px 0;
+}
+.news-list-content-left .news-item .news-image img {
+    border: 1px solid #EEE;
+}
+.news-name {
+    font-size: 20px;
+    font-weight: normal;
+    color: #3bafda;
+}
+.panel .news-panel-body {
+    overflow: hidden;
+    background: #fff;
+}
+.news-info a {
+    text-decoration: none;
+}
+/****/
+#search_panel {
+    display: block;
+    margin-bottom: 20px;
+}
+#search_panel input[type=text] {
+    padding: 5px;
+    width: 100%;
+    text-indent: 10px;
+    outline: 0;
+    box-sizing: border-box;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font: 400 13.3333px Arial;
+}
+#search_panel button {
+    border: 0;
+    background: none;
+    outline: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 35px;
+    width: 35px;
+}
+.panel_header {
+    color: #fff;
+    background-color: #003e70;
+    min-height: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.panel_header i {
+    padding-right: 10px;
+}
+#support_online .account {
+    padding: 10px;
+}
+#support_online .name {
+    font-size: 15px;
+    margin-bottom: 5px;
+    border-bottom: 1px dotted #eee;
+}
+#support_online .sky {
+    float: left;
+    padding-right: 10px;
+}
+#support_online .phone {
+    color: #a90000;
+    font-size: 15px;
+    line-height: 30px;
+}
+/*****/

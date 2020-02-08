@@ -1,4 +1,3 @@
-
 <?php
 /**
  * The template for displaying the footer.
@@ -10,12 +9,16 @@
 
 ?>
 
-            </div><!-- .col-full -->
-            <div class="col-lg-3 col-md-12">
+            <!-- </div> -->
+            <!-- .col-full -->
+            <!-- <div class="col-lg-4 col-md-12">
+
                     hello
-            </div>
-        </div><!-- .col-container -->
-	</div><!-- #content -->
+            </div> -->
+        <!-- </div> -->
+        <!-- .col-container -->
+	<!-- </div> -->
+    <!-- #content -->
 
 	<?php do_action( 'storefront_before_footer' ); ?>
 
@@ -29,7 +32,7 @@
 	<?php do_action( 'storefront_after_footer' ); ?>
 
 </div><!-- #page -->
-<?php wp_footer() ?>
+<?php wp_footer(); ?>
 
 </body>
 </html>
