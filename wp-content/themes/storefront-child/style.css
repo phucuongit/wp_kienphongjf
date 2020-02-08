@@ -30,7 +30,7 @@ body {
     float: left;
     width: 80%;
     box-sizing: border-box;
-    padding-right: 30px;
+    padding-right: 0px;
 }
 .news-list-content-right {
     float: left;
@@ -61,9 +61,10 @@ body {
     overflow: hidden;
     border-bottom: 1px dashed #D8D8D8;
 }
+
 .news-image {
     float: left;
-    margin: 0px 10px 4px 0;
+    margin-right: 10px;
 }
 .news-list-content-left .news-item .news-image img {
     border: 1px solid #EEE;
@@ -102,8 +103,8 @@ body {
     background: none;
     outline: 0;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 20px;
+    top: -1px;
     height: 35px;
     width: 35px;
 }
@@ -117,6 +118,7 @@ body {
     box-sizing: border-box;
     font-weight: normal;
     text-transform: uppercase;
+    margin-bottom: 0px;
 }
 .panel_header i {
     padding-right: 10px;
@@ -131,11 +133,13 @@ body {
 }
 #support_online .sky {
     float: left;
-    padding-right: 10px;
+    margin-right: 10px;
 }
 #support_online .phone {
     color: #a90000;
     font-size: 15px;
     line-height: 30px;
 }
+#support_online .account:first-child{padding-bottom:0px}
+
 /*****/
