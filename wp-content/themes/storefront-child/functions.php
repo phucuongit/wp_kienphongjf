@@ -1,19 +1,24 @@
 <?php
 
+include dirname(__FILE__) . '/inc/components/slideBanner.php';
+
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
 function enqueue_parent_styles() {
     $parent_style = 'parent-style';
 
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
-    wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/style.css',
-        array( $parent_style ),
-        wp_get_theme()->get('Version')
-    );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), wp_get_theme()->get('Version'));
     wp_enqueue_style('boostrap-css', get_stylesheet_directory_uri() . '/dist/css/bootstrap.css', array($parent_style), wp_get_theme()->get('Version'));
-
+	wp_enqueue_style('owl-css', get_stylesheet_directory_uri() . '/dist/css/owl.carousel.min.css', array($parent_style), wp_get_theme()->get('Version'));
+	wp_enqueue_style('owl-theme-default', get_stylesheet_directory_uri() . '/dist/css/owl.theme.default.min.css', array($parent_style), wp_get_theme()->get('Version'));
+	
     wp_enqueue_style('app-css', get_stylesheet_directory_uri() . '/dist/css/app.css', array($parent_style), wp_get_theme()->get('Version'));
+	
+	wp_enqueue_script( 'owl-carousel-js', get_stylesheet_directory_uri() . '/dist/js/owl.carousel.min.js', array('jquery'), wp_get_theme()->get('Version'));
+	
+	wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array('jquery'), wp_get_theme()->get('Version'));
+
 }
 if(!function_exists('storefront_product_by_cateogry')){
     function storefront_product_by_cateogry(){
@@ -48,7 +53,7 @@ if(!function_exists('storefront_product_by_cateogry')){
 
 			do_action( 'storefront_homepage_before_featured_products' );
 
-			echo '<h2 class="panel-header">' . wp_kses_post( $args['title'] ) . '</h2>';
+			echo '<h2 class="panel-header-pagehome">' . wp_kses_post( $args['title'] ) . '</h2>';
 
 			do_action( 'storefront_homepage_after_featured_products_title' );
 
@@ -62,7 +67,8 @@ if(!function_exists('storefront_product_by_cateogry')){
     add_action('homepage', 'storefront_product_by_cateogry', 20);
 }
 function remove_action_storeFront(){
-    remove_action('homepage', 'storefront_product_categories', 20);
+	remove_action('homepage', 'storefront_homepage_content', 10);
+	remove_action('homepage', 'storefront_product_categories', 20);
     remove_action('homepage', 'storefront_best_selling_products', 70);
     
 }
