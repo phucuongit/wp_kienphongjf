@@ -149,7 +149,7 @@ function woocommerce_category_image() {
         echo '<img src="' . $image . '" alt="' . $cat->name . '" width="900" />';
     }
   }
-
+}
 /** REGISTER SIDEBAR */
 add_action( 'widgets_init', 'registerSidebar' );
 function registerSidebar(){
@@ -164,4 +164,4 @@ function registerSidebar(){
 		'after_title'   => '</h3>',
 	));
 
-}
+};
