@@ -155,6 +155,7 @@ ul.products li.product a.woocommerce-LoopProduct-link {
 #menu-main-menu.navbar-nav {
     
     li.nav-item {
+        
         text-decoration: none;
         
         a {
@@ -176,6 +177,7 @@ ul.products li.product a.woocommerce-LoopProduct-link {
             min-width: 200px;
             z-index: 99;
             display: none;
+        
         }
         ul.menu-depth-2{
             right: 200px;
@@ -186,5 +188,62 @@ ul.products li.product a.woocommerce-LoopProduct-link {
             color: #0083a1;
             text-decoration: none;
         }
+    }
+}
+/* STICKY NAV */
+#masthead{
+    &.sticky{
+        position: fixed; 
+        animation: stickyAnimation 0.3s;
+        transform: translateY(0);
+    }
+}
+@keyframes stickyAnimation{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/* PAGE CONTACT */
+#frm-contact{
+    .inline {
+        display: block;
+        padding-right: 10px;
+        line-height: 29px;
+        text-align: right;
+    }
+    input{
+        font-size: 13px;
+        height: 30px;
+        padding: 0 0 0 25px;
+        width: 70%;
+        outline: 0;
+        border: 1px solid #eee;
+        background-color: white;
+    }
+    .icon-append {
+        left: 24px;
+        z-index: 99;
+        position: absolute;
+        top: 8px;
+    }
+    textarea{
+        font-size: 13px;
+        height: 100px;
+        padding: 0;
+        border: 1px solid #eee;
+        background-color: white;
+        padding: 0 0 0 25px;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+.cms_reset, .cms_send{
+    padding: 7px;
+    &:focus{
+        outline: none;
     }
 }

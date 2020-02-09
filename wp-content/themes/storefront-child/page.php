@@ -9,41 +9,34 @@
  *
  * @package storefront
  */
+get_header();?>
 
-get_header(); ?>
+<div class="container row">
 
-	<div id="primary" class="content-area">
-    <div class="container row">
-        <div class="col-lg-9 col-md-12">
-            <main id="main" class="site-main" role="main">
+    <div class="news-list-content-left news-list col-lg-9 col-md-12">
 
-                <?php
-                while ( have_posts() ) :
-                    the_post();
-
-                    do_action( 'storefront_page_before' );
-
+        <div class="panel">
+            <h1 class="news-panel-header"><?php the_title() ?></h1>
+            <div class="news-panel-content news-panel-body">
+                <?php    
+                     while ( have_posts() ) : the_post();
+ 
+                    // Include the page content template.
                     get_template_part( 'content', 'page' );
 
-                    /**
-                     * Functions hooked in to storefront_page_after action
-                     *
-                     * @hooked storefront_display_comments - 10
-                     */
-                    do_action( 'storefront_page_after' );
-
-                endwhile; // End of the loop.
-                ?>
-
-            </main><!-- #main -->
+                    // End of the loop.
+                    endwhile; ?>
+            </div>
+            <!-- news-panel-content -->
         </div>
-        <div class="col-lg-3 col-md-12">
-                <?php do_action( 'storefront_sidebar' ); ?>
-                'tesst'
+        <!-- panel -->
+
+    </div>
+
+    <div class="news-list-content-right col-lg-3 col-md-12">
+        <div class="hero-sidebar">
+            <?php get_sidebar(); ?>
         </div>
     </div>
-	</div><!-- #primary -->
-
-<?php
-
-get_footer();
+</div>
+<?php get_footer();?>

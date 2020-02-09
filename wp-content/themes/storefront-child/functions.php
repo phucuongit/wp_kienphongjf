@@ -92,9 +92,9 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 function add_inquiry_link_instead_price( $price, $product ) {
 	// var_dump($product);
     if ( '' === $product->get_price() || 0 == $product->get_price() || $product->get_price()) :
-		return '
-				<span class="price--button">Call</span>
-				<a href="product/'.$product->get_slug().'" class="view-more" title="">Details</a>';
+		$output = '<span class="price--button">Call</span>';
+		if(!is_product()) $output .= '<a href="product/'.$product->get_slug().'" class="view-more" title="">Details</a>';
+		return $output;
     endif;
 }
 add_filter( 'woocommerce_get_price_html', 'add_inquiry_link_instead_price', 100, 2 );
