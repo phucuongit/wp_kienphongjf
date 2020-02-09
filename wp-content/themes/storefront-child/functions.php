@@ -16,6 +16,7 @@ function enqueue_parent_styles() {
 	
     wp_enqueue_style('app-css', get_stylesheet_directory_uri() . '/dist/css/app.css', array($parent_style), wp_get_theme()->get('Version'));
 	
+	wp_enqueue_script( 'boostrap-js', get_stylesheet_directory_uri() . '/dist/js/bootstrap.min.js', array('jquery'), wp_get_theme()->get('Version'));
 	wp_enqueue_script( 'owl-carousel-js', get_stylesheet_directory_uri() . '/dist/js/owl.carousel.min.js', array('jquery'), wp_get_theme()->get('Version'));
 	
 	wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array('jquery'), wp_get_theme()->get('Version'));
