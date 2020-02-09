@@ -12,3 +12,5 @@ Stack trace:
 
 2020-02-09T12:29:51+00:00 CRITICAL syntax error, unexpected '$output' (T_VARIABLE) in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\WPDocs_Walker_Nav_Menu.php on line 62
 
+2020-02-09T14:11:47+00:00 CRITICAL Call to undefined function woocommerce_category_image() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\archive-product.php on line 59
+
