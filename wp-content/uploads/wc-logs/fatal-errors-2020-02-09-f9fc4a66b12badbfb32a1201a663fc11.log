@@ -14,3 +14,5 @@ Stack trace:
 
 2020-02-09T14:11:47+00:00 CRITICAL Call to undefined function woocommerce_category_image() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\archive-product.php on line 59
 
+2020-02-09T16:18:27+00:00 CRITICAL syntax error, unexpected '<<' (T_SL) in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\functions.php on line 138
+
