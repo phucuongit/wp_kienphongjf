@@ -1,9 +1,10 @@
 
 <div id="search-panel">
     <div class="panel-body">
-        <form action="http://nsvn.vn/vn/search.html">
-            <input type="text" name="kw" value="" placeholder="Nhập từ khóa tìm kiếm...">
+        <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <input type="text" name="s" value="" placeholder="Nhập từ khóa tìm kiếm...">
             <button type="submit" title="Tìm sản phẩm"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <!-- <input type="hidden" name="post_type" value="product"> -->
         </form>
     </div>
 </div>
