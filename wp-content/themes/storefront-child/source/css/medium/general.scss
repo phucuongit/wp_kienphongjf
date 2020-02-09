@@ -1,4 +1,7 @@
-.panel-header-pagehome{
+a:focus{
+    outline: none!important;
+}
+.panel-header-pagehome {
     background-color: #e6e9ed;
     color: #003e70;
     padding: 5px 0;
@@ -11,17 +14,18 @@
     font-size: 20px;
     line-height: 35px;
     margin-bottom: 5px;
-    
+
 }
 
-.storefront-products-bycategory{
-  
-    a.woocommerce-loop-product__link{
-        &:hover{
+.storefront-products-bycategory {
+
+    a.woocommerce-loop-product__link {
+        &:hover {
             text-decoration: none;
         }
     }
-    h2.woocommerce-loop-product__title{
+
+    h2.woocommerce-loop-product__title {
         font-weight: normal;
         font-size: 16px;
         line-height: 22px;
@@ -29,49 +33,59 @@
         color: #003e70;
         padding: 5px 0;
         min-height: 45px;
-        
     }
 }
 
-.storefront-products-bycategory{
+.storefront-products-bycategory {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
     -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    margin-bottom: 20px!important;
+    margin-bottom: 20px !important;
     padding-left: 5px;
     padding-right: 5px;
 }
-.product.type-product{
+
+.product.type-product {
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     padding: 5px;
     min-height: 350px;
 }
-.news-info{
+
+.news-info {
     float: left;
     width: 80%;
 }
+
 /* SINGLE PRODUCT */
-.posted_in, .tagged_as,.sku_wrapper{
+.posted_in,
+.tagged_as,
+.sku_wrapper {
     font-size: 14px;
-    .sku{
+
+    .sku {
         font-weight: normal;
     }
 }
-nav.storefront-product-pagination{
+
+nav.storefront-product-pagination {
     display: none;
 }
-.price--button{
+
+.price--button {
     color: #c70404;
     font-size: 20px;
 }
-.single-product div.product .product_meta,{
-    padding-top: unset!important;
-    border-top: none!important;
+
+.single-product div.product .product_meta,
+    {
+    padding-top: unset !important;
+    border-top: none !important;
 }
-ul.products li.product a.woocommerce-LoopProduct-link{
+
+ul.products li.product a.woocommerce-LoopProduct-link {
     text-decoration: none;
 }
 
@@ -82,16 +96,18 @@ ul.products li.product a.woocommerce-LoopProduct-link{
     border-radius: 5px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     margin-bottom: 20px;
+
     .panel_header {
         background-color: #e6e9ed;
-         
+
         padding: 5px 0;
         padding-left: 10px;
         font-weight: normal;
         min-height: 40px;
         border-radius: 5px;
         font-size: 20px;
-        h1{
+
+        h1 {
             font-size: 20px;
             font-weight: bold;
             line-height: 32px;
@@ -99,13 +115,76 @@ ul.products li.product a.woocommerce-LoopProduct-link{
             color: #003e70;
         }
     }
+
     .note {
         color: #FF2222;
         font-size: 11px;
         width: 100%;
     }
+
     .panel_content {
         padding: 10px;
         overflow: hidden;
+    }
+}
+
+/* HEADER PAGE */
+.logo-nav {
+    vertical-align: middle;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.title-nav {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    color: #002d69;
+    font-size: 18px;
+}
+
+#masthead {
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 3px #ccc;
+    padding-top: 0px;
+}
+
+#menu-main-menu.navbar-nav {
+    
+    li.nav-item {
+        text-decoration: none;
+        
+        a {
+            color: #002d69;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 50px;
+            padding: 0 15px;
+            font-family: 'UVNTinTuc';
+            display: block;
+            text-transform: uppercase;
+            
+        }
+        ul.sub-menu{
+            list-style: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0px 3px 3px #ccc;
+            min-width: 200px;
+            z-index: 99;
+            display: none;
+        }
+        ul.menu-depth-2{
+            right: 200px;
+            top:0;
+        }
+
+        &:hover>a {
+            color: #0083a1;
+            text-decoration: none;
+        }
     }
 }

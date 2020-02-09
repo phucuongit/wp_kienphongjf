@@ -1,3 +1,7 @@
+a:focus {
+  outline: none !important;
+}
+
 .panel-header-pagehome {
   background-color: #e6e9ed;
   color: #003e70;
@@ -117,6 +121,66 @@ ul.products li.product a.woocommerce-LoopProduct-link {
 .panel .panel_content {
   padding: 10px;
   overflow: hidden;
+}
+
+/* HEADER PAGE */
+
+.logo-nav {
+  vertical-align: middle;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.title-nav {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  color: #002d69;
+  font-size: 18px;
+}
+
+#masthead {
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 0 3px #ccc;
+  padding-top: 0px;
+}
+
+#menu-main-menu.navbar-nav li.nav-item {
+  text-decoration: none;
+}
+
+#menu-main-menu.navbar-nav li.nav-item a {
+  color: #002d69;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 50px;
+  padding: 0 15px;
+  font-family: "UVNTinTuc";
+  display: block;
+  text-transform: uppercase;
+}
+
+#menu-main-menu.navbar-nav li.nav-item ul.sub-menu {
+  list-style: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 3px 3px #ccc;
+  min-width: 200px;
+  z-index: 99;
+  display: none;
+}
+
+#menu-main-menu.navbar-nav li.nav-item ul.menu-depth-2 {
+  right: 200px;
+  top: 0;
+}
+
+#menu-main-menu.navbar-nav li.nav-item:hover > a {
+  color: #0083a1;
+  text-decoration: none;
 }
 
 @media (min-width: 1200px) {

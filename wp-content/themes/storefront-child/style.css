@@ -16,6 +16,10 @@
     display: inline-block;
     width: 100%;
 }
+@font-face{
+    font-family: UVNTinTuc;
+    src: url('./font/uvntintuchepthem_b-swiss.ttf');
+}
 /***/
 body {
     font: 14px/22px 'roboto', Arial, Tahoma, sans-serif;

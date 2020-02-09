@@ -1,0 +1,14 @@
+2020-02-09T11:42:05+00:00 CRITICAL Uncaught Error: Class 'WPDocs_Walker_Nav_Menu' not found in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\header.php:46
+Stack trace:
+#0 C:\xampp\htdocs\kienphongjf\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\kienphongjf\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\kienphongjf\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\template-homepage.php(15): get_header()
+#4 C:\xampp\htdocs\kienphongjf\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\kienphongjf\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\kienphongjf\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\header.php on line 46
+
+2020-02-09T12:29:51+00:00 CRITICAL syntax error, unexpected '$output' (T_VARIABLE) in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\WPDocs_Walker_Nav_Menu.php on line 62
+

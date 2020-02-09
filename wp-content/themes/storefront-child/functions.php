@@ -1,6 +1,7 @@
 <?php
 
 include dirname(__FILE__) . '/inc/components/slideBanner.php';
+include dirname(__FILE__) . '/inc/WPDocs_Walker_Nav_Menu.php';
 
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
@@ -89,8 +90,11 @@ unset($tabs['reviews']); 					// Remove Reviews tab
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
 function add_inquiry_link_instead_price( $price, $product ) {
-    if ( '' === $product->get_price() || 0 == $product->get_price() ) :
-        return '<p class="price--button">Call</p>';
+	// var_dump($product);
+    if ( '' === $product->get_price() || 0 == $product->get_price() || $product->get_price()) :
+		return '
+				<span class="price--button">Call</span>
+				<a href="product/'.$product->get_slug().'" class="view-more" title="">Details</a>';
     endif;
 }
 add_filter( 'woocommerce_get_price_html', 'add_inquiry_link_instead_price', 100, 2 );
