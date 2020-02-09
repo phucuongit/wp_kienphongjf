@@ -195,6 +195,7 @@ ul.products li.product a.woocommerce-LoopProduct-link {
   -webkit-animation: stickyAnimation 0.3s;
           animation: stickyAnimation 0.3s;
   transform: translateY(0);
+  width: 100%;
 }
 
 @-webkit-keyframes stickyAnimation {
