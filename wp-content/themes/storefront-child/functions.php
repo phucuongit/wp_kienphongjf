@@ -2,7 +2,7 @@
 
 include dirname(__FILE__) . '/inc/components/slideBanner.php';
 include dirname(__FILE__) . '/inc/WPDocs_Walker_Nav_Menu.php';
-
+include dirname(__FILE__) . '/inc/widgets/hotlineWidget.php';
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
 function enqueue_parent_styles() {
@@ -72,7 +72,7 @@ function remove_action_storeFront(){
 	remove_action('homepage', 'storefront_product_categories', 20);
     remove_action('homepage', 'storefront_best_selling_products', 70);
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-
+	remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 	// change priority of hook woocommerce_template_single_price
 	// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 	// add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 60);
@@ -92,7 +92,7 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 function add_inquiry_link_instead_price( $price, $product ) {
 	// var_dump($product);
     if ( '' === $product->get_price() || 0 == $product->get_price() || $product->get_price()) :
-		$output = '<span class="price--button">Call</span>';
+		$output = '<a class="woocommerce-LoopProduct-link" href="'.site_url().'/lien-he/"><span class="price--button">Call</span></a>';
 		if(!is_product()) $output .= '<a href="product/'.$product->get_slug().'" class="view-more" title="">Details</a>';
 		return $output;
     endif;
@@ -133,4 +133,19 @@ function devvn_wp_corenavi($custom_query = null, $paged = null) {
         'next_text'    => __('Next','devvn'),
     ) );
     if($total > 1) echo '</div>';
+}
+
+/** REGISTER SIDEBAR */
+add_action( 'widgets_init', 'registerSidebar' );
+function registerSidebar(){
+	register_sidebar(
+		array(
+		'id'	=> 'sidebar_left',
+		'name'	=> __('Left Sidebar'),
+		'description'   => __( 'A short description of the left sidebar.' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title panel-header">',
+		'after_title'   => '</h3>',
+	));
 }

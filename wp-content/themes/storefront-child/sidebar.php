@@ -1,4 +1,10 @@
 
+<?php 
+    if(!is_active_sidebar('sidebar_left')){
+        return false;
+    }
+    dynamic_sidebar( 'sidebar_left' );
+?>
 <div id="search-panel">
     <div class="panel-body">
         <form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
