@@ -22,7 +22,7 @@
 							
 							<?php
 								while (have_posts() ) : the_post(); ?>
-									<div class="col-md-4 search-col-padding10">
+									<div class="col-md-3 search-col-padding10">
 								        <div class="product_item">
 									        <div class="product_image">
 												<a href="<?php echo get_permalink(); ?>" title="<?php the_title();?>"><?php the_post_thumbnail('full')?></a>
@@ -43,7 +43,7 @@
 							<?php }
 							
 						?>
-					
+						<?php wp_corenavi_table();?>
                 </div>
             </div>
         </div>

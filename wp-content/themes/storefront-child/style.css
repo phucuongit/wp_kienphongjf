@@ -334,3 +334,28 @@ body {
     box-sizing: border-box;
     font-size: 20px;
 }
+/* PAGINATION */
+.pagination {
+    text-align: center;
+    list-style: none;
+    margin: 10px;
+    clear: both;
+    display: block;
+    margin: 0 auto;
+}
+.pagination .page-numbers {
+    display: inline-block;
+    color: #333;
+    border-left: 1px solid #747474;
+}
+.pagination a, .pagination span {
+    border-left: 1px solid #747474;
+    display: block;
+    padding: 0 10px;
+    line-height: 21px;
+    font-size: 12px;
+}
+.pagination a:hover, .pagination .current, .pagination .next {
+    color: #CE1010;
+    text-decoration: none;
+}

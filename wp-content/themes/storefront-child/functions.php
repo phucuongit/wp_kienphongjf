@@ -118,26 +118,29 @@ function teaser($limit) {
 }
 
 //Code phan trang
-function devvn_wp_corenavi($custom_query = null, $paged = null) {
-    global $wp_query;
-    if($custom_query) $main_query = $custom_query;
-    else $main_query = $wp_query;
-    $paged = ($paged) ? $paged : get_query_var('paged');
-    $big = 999999999;
-    $total = isset($main_query->max_num_pages)?$main_query->max_num_pages:'';
-    if($total > 1) echo '<div class="pagenavi">';
-    echo paginate_links( array(
-        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-        'format' => '?paged=%#%',
-        'current' => max( 1, $paged ),
-        'total' => $total,
-        'mid_size' => '10', // Số trang hiển thị khi có nhiều trang trước khi hiển thị ...
-        'prev_text'    => __('Prev','devvn'),
-        'next_text'    => __('Next','devvn'),
-    ) );
-    if($total > 1) echo '</div>';
+function wp_corenavi_table($custom_query = null) {
+      global $wp_query;
+      if($custom_query) $main_query = $custom_query;
+      else $main_query = $wp_query;
+      $big = 999999999;
+      $total = isset($main_query->max_num_pages)?$main_query->max_num_pages:'';
+      if($total > 1);
+      $resultPagi = '';
+      $resultPagi.= '<ul class="pagination">
+      					<li>';
+      $resultPagi.= paginate_links( array(
+				         'base'        => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				         'format'   => '?paged=%#%',
+				         'current'  => max( 1, get_query_var('paged') ),
+				         'total'    => $total,
+				         'mid_size' => '10',
+				         'prev_text'    => __('«','devvn'),
+				         'next_text'    => __('»','devvn'),
+			        ));			    
+      if($total > 1);
+      $resultPagi.= '<li></ul>';
+      echo $resultPagi;
 }
-
 
 /*Lấy thumbnail category*/
 add_action( 'woocommerce_archive_description', 'woocommerce_category_image', 2 );
@@ -179,3 +182,11 @@ function showThumnail($width, $height) {
 	return $result;
 		                            		
 }
+
+/* REMOVE PAGE SEARCH PRODUCT */
+
+function remove_pages_from_search() {
+    global $wp_post_types;
+    $wp_post_types['page']->exclude_from_search = true;
+}
+add_action('init', 'remove_pages_from_search');
