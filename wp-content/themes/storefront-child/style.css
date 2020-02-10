@@ -81,7 +81,7 @@ body {
 }
 .news-info{
     float: left;
-    width: 80%;
+    width: auto;
 }
 
 .news-info a {

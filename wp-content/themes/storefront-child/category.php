@@ -10,46 +10,29 @@
             <h1 class="news-panel-header">TIN TỨC</h1>
             <div class="news-panel-content news-panel-body">
                 <div class="news-panel-body">
-                    <div class="news-item">
-                        <div class="news-image">
-                            <a href="" title="">
-                                <img src="http://nsvn.vn/index.php?t=ajax&amp;p=tthumb&amp;src=aHR0cDovL25zdm4udm4vdXBsb2FkL25ld3MvaW1hZ2VzLmpwZw==&amp;w=200&amp;h=150" alt="Hiệp định thương mại tự do cung cấp nhiều cơ hội cho nông nghiệp">
-                            </a>
-                        </div>
-                        <div class="news-info">
-                            <a href="http://nsvn.vn/vn/tin-tuc/hiep-dinh-thuong-mai-tu-do-cung-cap-nhieu-co-hoi-cho-nong-nghiep-9.html" title="Hiệp định thương mại tự do cung cấp nhiều cơ hội cho nông nghiệp">
-                                <h2 class="news-name">Hiệp định thương mại tự do cung cấp nhiều cơ hội cho nông nghiệp</h2>
-                            </a>
-                            <div class="news-descrip">Một loạt các hiệp định thương mại tự do được thực hiện trong năm nay sẽ mang lại nhiều cơ hội mới và rõ ràng cho ngành nông nghiệp, từ đó cải thiện cơ hội đầu tư trên toàn chuỗi giá trị.
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="news-item">
-                        <div class="news-image">
-                            <a href="http://nsvn.vn/vn/tin-tuc/cong-ty-nhat-ban-tim-cach-thanh-lap-mot-nha-may-rau-sach-o-hanan-8.html" title="Công ty Nhật Bản tìm cách thành lập một nhà máy rau sạch ở Hanan">
-                                <img src="http://nsvn.vn/index.php?t=ajax&amp;p=tthumb&amp;src=aHR0cDovL25zdm4udm4vdXBsb2FkL25ld3MvY2hhbmgtZGF5LmpwZw==&amp;w=200&amp;h=150" alt="Công ty Nhật Bản tìm cách thành lập một nhà máy rau sạch ở Hanan">
-                            </a>
-                        </div>
-                        <div class="news-info">
-                            <a href="http://nsvn.vn/vn/tin-tuc/cong-ty-nhat-ban-tim-cach-thanh-lap-mot-nha-may-rau-sach-o-hanan-8.html" title="Công ty Nhật Bản tìm cách thành lập một nhà máy rau sạch ở Hanan">
-                                <h2 class="news-name">Công ty Nhật Bản tìm cách thành lập một nhà máy rau sạch ở Hanan</h2>
-                            </a>
-                            <div class="news-descrip">Tập đoàn Nhật Bản Showa Denko, hợp tác với chính quyền ở tỉnh Hanan phía bắc, đã phát triển kế hoạch phát triển các nhà máy sản xuất rau sạch sử dụng công nghệ chiếu sáng LED.
-                            </div>
-
-                        </div>
-                    </div>
-
+					<?php if (have_posts()) : ?>
+						<?php while (have_posts()) : the_post(); ?>
+							<div class="news-item">
+		                        <div class="news-image">
+		                            <a href="<?php the_permalink(); ?>">
+		                               <img width="200" height="150" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="<?php the_title(); ?>">
+		                            </a>
+		                        </div>
+		                        <div class="news-info">
+		                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+		                                <h2 class="news-name"><?php the_title(); ?></h2>
+		                            </a>
+		                            <div class="news-descrip"><?php echo teaser(80); ?>
+		                            </div>
+		                        </div>
+		                    </div>
+						<?php endwhile; else : ?>
+							<li><p>Không có bài viết nào trong chuyên mục!</p></li>
+						<?php endif; ?>
                 </div>
-
             </div>
-            <!-- news-panel-content -->
         </div>
-        <!-- panel -->
-
     </div>
-
     <div class="news-list-content-right col-lg-3 col-md-12">
         <div class="hero-sidebar">
             <?php get_sidebar(); ?>
