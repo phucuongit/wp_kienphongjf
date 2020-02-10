@@ -3,7 +3,6 @@
     if(!is_active_sidebar('sidebar_left')){
         return false;
     }
-    dynamic_sidebar( 'sidebar_left' );
 ?>
 <div id="search-panel">
     <div class="panel-body">
@@ -14,28 +13,10 @@
         </form>
     </div>
 </div>
-<div id="support-online" class="hero-panel">
-    <h3 class="panel-header"><i class="fa fa-comments-o"></i>Hỗ trợ trực tuyến</h3>
-    <div class="panel-body">
-        <div class="account rows">
-            <p class="name">Ms Trancy</p>
-            <a target="_blank" href="skype:Sandy.nguyen14?chat" rel="nofollow">
-                <img class="sky" src="http://nsvn.vn/template/img/skype.png" alt="Sandy.nguyen14" width="30px">
-            </a>
-            <div class="phone">+84 93 448 93 29</div>
-        </div>
-        <!-- account -->
-        <div class="account rows">
-            <p class="name">Ms Thasa</p>
-            <a target="_blank" href="skype:nguyen.thsa2301?chat" rel="nofollow">
-                <img class="sky" src="http://nsvn.vn/template/img/skype.png" alt="nguyen.thsa2301" width="30px">
-            </a>
-            <div class="phone">0084 902 819 638</div>
-        </div>
-        <!-- account -->
-    </div>
-    <!-- panel-body -->
-</div>
+<?php 
+dynamic_sidebar( 'sidebar_left' );
+?>
+
 <div class="hero-panel">
     <h3 class="panel-header"><i class="fa fa-barcode"></i>Featured products</h3>
     <div class="panel-body padding5">

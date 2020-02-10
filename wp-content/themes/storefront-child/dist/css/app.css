@@ -89,6 +89,27 @@ ul.products li.product a.woocommerce-LoopProduct-link {
   text-decoration: none;
 }
 
+.woocommerce-product-gallery.woocommerce-product-gallery--with-images {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #eee, -1px -1px 2px #eee;
+  padding: 10px !important;
+}
+
+.woocommerce-tabs.wc-tabs-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.summary.entry-summary {
+  padding-top: 10px;
+}
+
+.item-scroll .product-item {
+  padding: 5px;
+}
+
 /*
     CSS BLOCK PANEL
 */
@@ -265,6 +286,10 @@ ul.products li.product a.woocommerce-LoopProduct-link {
 .cms_reset:focus,
 .cms_send:focus {
   outline: none;
+}
+
+.woocommerce-LoopProduct-link:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 1200px) {

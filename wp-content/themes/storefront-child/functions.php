@@ -73,7 +73,9 @@ function remove_action_storeFront(){
 	remove_action('homepage', 'storefront_product_categories', 20);
     remove_action('homepage', 'storefront_best_selling_products', 70);
 	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 	remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+	
 	// change priority of hook woocommerce_template_single_price
 	// remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
 	// add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 60);
@@ -163,5 +165,4 @@ function registerSidebar(){
 		'before_title'  => '<h3 class="widget-title panel-header">',
 		'after_title'   => '</h3>',
 	));
-
-};
+}
