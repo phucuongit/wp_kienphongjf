@@ -23,40 +23,49 @@ dynamic_sidebar( 'sidebar_left' );
         <div class="vert simply-scroll-container">
             <div class="simply-scroll-clip">
                 <div class="simply-scroll-list">
-                    <ul id="list-product-hot" class="simply-scroll-list">
-                        <li>
-                            <div class="item-scroll">
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="" title="">
-                                            <img src="http://nsvn.vn/index.php?t=ajax&amp;p=tthumb&amp;src=aHR0cDovL25zdm4udm4vdXBsb2FkL3Byb2R1Y3QvbHdwLmpwZw==&amp;w=450&amp;h=380&amp;zc=1" alt="CASHEW NUT LWP">
-                                        </a>
-                                    </div>
-                                    <a href="" title="">
-                                        <h2 class="product_name">CASHEW NUT LWP</h2>
-                                    </a>
-                                    <p class="product-des">CASHEW NUT LWP</p>
-                                    <p class="product-price">Call</p>
-                                    <a href="" class="view-more" title="">Details</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="item-scroll">
-                                <div class="product-item">
-                                    <div class="product-image">
-                                        <a href="http://nsvn.vn/en/san-pham/wasabi-coated-peanut-58.html" title="WASABI COATED PEANUT "><img src="http://nsvn.vn/index.php?t=ajax&amp;p=tthumb&amp;src=aHR0cDovL25zdm4udm4vdXBsb2FkL3Byb2R1Y3QvMmRjNTA3NzllMTFiMDI0NTViMGEuanBn&amp;w=450&amp;h=380&amp;zc=1" alt="WASABI COATED PEANUT "></a>
-                                    </div>
-                                    <a href="http://nsvn.vn/en/san-pham/wasabi-coated-peanut-58.html" title="WASABI COATED PEANUT ">
-                                        <h2 class="product_name">WASABI COATED PEANUT </h2>
-                                    </a>
-                                    <p class="product-des">WASABI COATED PEANUT </p>
-                                    <p class="product-price">Call</p>
-                                    <a href="http://nsvn.vn/en/san-pham/wasabi-coated-peanut-58.html" class="view-more" title="WASABI COATED PEANUT ">Details</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="owl-carousel owl-theme">
+                        <ul id="list-product-hot" class="simply-scroll-list">
+                            <?php
+                            $args = array(
+                                'post_type' => 'product',
+                                'posts_per_page' => 2,
+                                'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'product_visibility',
+                                            'field'    => 'name',
+                                            'terms'    => 'featured',
+                                        ),
+                                    ),
+                                );
+                            $loop = new WP_Query( $args );
+                            if ( $loop->have_posts() ) {
+                                while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                    <li>
+                                        <div class="item-scroll">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a href="<?php echo get_permalink(); ?>" title="<?php the_title();?>">
+                                                        <img width="450" height="380" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="<?php the_title(); ?>">
+                                                    </a>
+                                                </div>
+                                                <a href="<?php echo get_permalink(); ?>" title="<?php the_title();?>">
+                                                    <h2 class="product_name"><?php the_title();?></h2>
+                                                </a>
+                                                <p class="product-des"><?php echo teaser(30); ?></p>
+                                                <p class="product-price">Call</p>
+                                                <a href="" class="view-more" title="">Details</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                            <?php
+                                endwhile;
+                            } else {
+                                echo __( 'No products found' );
+                            }
+                            wp_reset_postdata();
+                            ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
