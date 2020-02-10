@@ -20,3 +20,5 @@
 
 2020-02-10T01:06:52+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 64
 
+2020-02-10T02:00:41+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\functions.php on line 168
+

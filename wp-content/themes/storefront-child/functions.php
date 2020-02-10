@@ -165,3 +165,4 @@ function registerSidebar(){
 		'before_title'  => '<h3 class="widget-title panel-header">',
 		'after_title'   => '</h3>',
 	));
+}
