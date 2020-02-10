@@ -170,8 +170,9 @@ function registerSidebar(){
 /* THUMNAIL CATGORY */
 function showThumnail($width, $height) { 
 	$result = '';
-	if (wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()))) {
-		$result.= '<img width="'.$width.'" height="'.$height.'" src="'.wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())).'" alt="'.get_the_title().'">';
+	$thumbnail = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
+	if ($thumbnail) {
+		$result.= '<img width="'.$width.'" height="'.$height.'" src="'.$thumbnail.'" alt="'.get_the_title().'">';
 	} else {
 		$result.= '<img width="'.$width.'" height="'.$height.'"src="'.get_stylesheet_directory_uri().'/images/no-thumb.jpg" alt="'.get_the_title().'">';
 	}
