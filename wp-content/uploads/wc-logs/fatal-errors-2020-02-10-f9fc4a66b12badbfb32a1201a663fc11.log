@@ -1,0 +1,22 @@
+2020-02-10T00:02:04+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 38
+
+2020-02-10T00:03:04+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 39
+
+2020-02-10T00:05:04+00:00 CRITICAL syntax error, unexpected '<' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 42
+
+2020-02-10T00:08:39+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 47
+
+2020-02-10T00:15:40+00:00 CRITICAL syntax error, unexpected ':' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 65
+
+2020-02-10T00:17:40+00:00 CRITICAL syntax error, unexpected ',' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 67
+
+2020-02-10T00:18:03+00:00 CRITICAL syntax error, unexpected ',' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 67
+
+2020-02-10T00:19:27+00:00 CRITICAL syntax error, unexpected ',' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 67
+
+2020-02-10T00:19:28+00:00 CRITICAL syntax error, unexpected ',' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 67
+
+2020-02-10T00:59:46+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 70
+
+2020-02-10T01:06:52+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\inc\widgets\hotlineWidget.php on line 64
+
