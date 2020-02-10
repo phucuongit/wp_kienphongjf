@@ -16,6 +16,30 @@
                         <?php endwhile; ?>
                         <?php endif; ?>  
                     </div>
+                    <div id="news_orther">
+                        <h3 class="header">Other news</h3>
+                        <ul id="list_news_other">
+                            <?php 
+                                $getposts = new WP_query(); 
+                                $getposts->query('post_status=publish&showposts=8&post_type=post&offset=1'); 
+                            ?>
+                            <?php global $wp_query; $wp_query->in_the_loop = true; ?>
+                            <?php if ($getposts->have_posts()) : ?>
+                            <?php while ($getposts->have_posts()) : $getposts->the_post(); ?>
+                                <li>
+                                    <h2>
+                                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                        » <?php the_title(); ?></a>
+                                        <span class="get--datetime">&nbsp;(<?php echo get_the_date('d/m'); ?>)</span>
+                                    </h2>
+                                </li>
+                            <?php endwhile; wp_reset_postdata(); else : ?>
+                                <li>
+                                    <h2>» Chưa có bài viết nào được xem nhiều</h2>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

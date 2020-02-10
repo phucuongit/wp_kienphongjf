@@ -87,6 +87,31 @@ body {
 .news-info a {
     text-decoration: none;
 }
+
+#news_orther .header {
+    border-bottom: 1px solid #333;
+    border-radius: 0;
+    font-family: 'UVNTinTuc';
+    padding-left: 0;
+    font-size: 20px;
+}
+#list_news_other {
+    margin: 0px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#list_news_other li * {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    color: #333;
+}
+.get--datetime {
+    color: #909090;
+    font-size: 11px;
+}
 /* SIDEBAR */
 .hero-sidebar .panel-header{
     font-size: 17px;
