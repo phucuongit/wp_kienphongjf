@@ -1,9 +1,12 @@
-a:focus, button:focus{
-    outline: none!important;
+a:focus,
+button:focus {
+    outline: none !important;
 }
-.onsale{
-    display: none!important;
+
+.onsale {
+    display: none !important;
 }
+
 .panel-header-pagehome {
     background-color: #e6e9ed;
     color: #003e70;
@@ -91,25 +94,53 @@ nav.storefront-product-pagination {
 ul.products li.product a.woocommerce-LoopProduct-link {
     text-decoration: none;
 }
-.woocommerce-product-gallery.woocommerce-product-gallery--with-images{
+
+.woocommerce-product-gallery.woocommerce-product-gallery--with-images {
     padding: 20px;
     border: 1px solid #eee;
+    margin-top: 10px!important;
     border-radius: 5px;
     box-shadow: 1px 1px 2px #eee, -1px -1px 2px #eee;
-    padding:10px!important;
+    padding: 10px !important;
 }
-.single-product{}
-.woocommerce-tabs.wc-tabs-wrapper{
+
+.single-product {}
+
+.woocommerce-tabs.wc-tabs-wrapper {
     padding-left: 10px;
     padding-right: 10px;
 }
-.summary.entry-summary{
-    padding-top:10px;
+
+.summary.entry-summary {
+    padding-top: 10px;
 }
-.item-scroll{
-    .product-item{
+
+.item-scroll {
+    .product-item {
         padding: 5px;
     }
+}
+.product-description{
+    padding: 10px;
+    display: block;
+}
+.product-description__headline{
+    border-bottom: 1px solid #003e70;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 35px;
+}
+.news-panel-header {
+    background-color: #e6e9ed;
+    color: #003e70;
+    padding: 5px 0;
+    padding-left: 10px;
+    font-weight: normal;
+    min-height: 40px;
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 0px;
 }
 /*
     CSS BLOCK PANEL
@@ -175,11 +206,11 @@ ul.products li.product a.woocommerce-LoopProduct-link {
 }
 
 #menu-main-menu.navbar-nav {
-    
+
     li.nav-item {
-        
+
         text-decoration: none;
-        
+
         a {
             color: #002d69;
             font-weight: bold;
@@ -189,9 +220,10 @@ ul.products li.product a.woocommerce-LoopProduct-link {
             font-family: 'UVNTinTuc';
             display: block;
             text-transform: uppercase;
-            
+
         }
-        ul.sub-menu{
+
+        ul.sub-menu {
             list-style: none;
             position: absolute;
             background-color: #fff;
@@ -199,11 +231,12 @@ ul.products li.product a.woocommerce-LoopProduct-link {
             min-width: 200px;
             z-index: 99;
             display: none;
-        
+
         }
-        ul.menu-depth-2{
+
+        ul.menu-depth-2 {
             right: 200px;
-            top:0;
+            top: 0;
         }
 
         &:hover>a {
@@ -212,32 +245,38 @@ ul.products li.product a.woocommerce-LoopProduct-link {
         }
     }
 }
+
 /* STICKY NAV */
-#masthead{
-    &.sticky{
-        position: fixed; 
+#masthead {
+    &.sticky {
+        position: fixed;
         animation: stickyAnimation 0.3s;
         transform: translateY(0);
-        width: 100%;;
+        width: 100%;
+        ;
     }
 }
-@keyframes stickyAnimation{
-    0%{
+
+@keyframes stickyAnimation {
+    0% {
         transform: translateY(-100%);
     }
-    100%{
+
+    100% {
         transform: translateY(0);
     }
 }
+
 /* PAGE CONTACT */
-#frm-contact{
+#frm-contact {
     .inline {
         display: block;
         padding-right: 10px;
         line-height: 29px;
         text-align: right;
     }
-    input{
+
+    input {
         font-size: 13px;
         height: 30px;
         padding: 0 0 0 25px;
@@ -246,30 +285,50 @@ ul.products li.product a.woocommerce-LoopProduct-link {
         border: 1px solid #eee;
         background-color: white;
     }
+
     .icon-append {
         left: 24px;
         z-index: 99;
         position: absolute;
         top: 8px;
     }
-    textarea{
+
+    textarea {
         font-size: 13px;
         height: 100px;
         padding: 0;
         border: 1px solid #eee;
         background-color: white;
         padding: 0 0 0 25px;
-        &:focus{
+
+        &:focus {
             outline: none;
         }
     }
 }
-.cms_reset, .cms_send{
+
+.cms_reset,
+.cms_send {
     padding: 7px;
-    &:focus{
+
+    &:focus {
         outline: none;
     }
 }
-.woocommerce-LoopProduct-link:hover{
+
+.woocommerce-LoopProduct-link:hover {
     text-decoration: none;
+}
+
+.price--button {
+    background-color: #DB2828;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: normal;
+    color: #FFF;
+    font-family: arial;
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }

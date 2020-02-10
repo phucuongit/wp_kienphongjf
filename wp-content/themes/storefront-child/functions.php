@@ -86,7 +86,6 @@ add_action( 'init',  'remove_action_storeFront', 10);
 // Disable product review (tab)
 function woo_remove_product_tabs($tabs) {
 unset($tabs['reviews']); 					// Remove Reviews tab
-	echo 'test';
 	return $tabs;
 }
 
@@ -95,7 +94,7 @@ add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 function add_inquiry_link_instead_price( $price, $product ) {
 	// var_dump($product);
     if ( '' === $product->get_price() || 0 == $product->get_price() || $product->get_price()) :
-		$output = '<a class="woocommerce-LoopProduct-link" href="'.site_url().'/lien-he/"><span class="price--button">Call</span></a>';
+		$output = '<a class="woocommerce-LoopProduct-link" href="'.site_url().'/lien-he/"><button class="price--button">Call</button></a>';
 		if(!is_product()) $output .= '<a href="product/'.$product->get_slug().'" class="view-more" title="">Details</a>';
 		return $output;
     endif;

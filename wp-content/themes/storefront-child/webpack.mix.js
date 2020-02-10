@@ -11,10 +11,10 @@ let mix = require('laravel-mix');
  |
  */
 
-mix
+mix.webpackConfig({ devtool: "inline-source-map" })
     // .js('source/js/app.js', 'dist/js')
-    .sass('source/css/app.scss', 'dist/css')
     .sourceMaps()
+    .sass('source/css/app.scss', 'dist/css')
     .disableNotifications()
     .autoload({});
     

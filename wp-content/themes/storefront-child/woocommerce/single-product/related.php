@@ -22,13 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $related_products ) : ?>
 
 	<section class="related products">
-
+		<div class="panel">
 		<?php
-		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
+		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Other products', 'woocommerce' ) );
 
 		if ( $heading ) :
 			?>
-			<h2><?php echo esc_html( $heading ); ?></h2>
+			
+			<h2 class="news-panel-header"><?php echo esc_html( $heading ); ?></h2>
+			
 		<?php endif; ?>
 		
 		<?php woocommerce_product_loop_start(); ?>
@@ -46,7 +48,7 @@ if ( $related_products ) : ?>
 			<?php endforeach; ?>
 
 		<?php woocommerce_product_loop_end(); ?>
-
+		</div>
 	</section>
 	<?php
 endif;
