@@ -15,13 +15,7 @@
 							<div class="news-item">
 		                        <div class="news-image">
 		                            <a href="<?php the_permalink(); ?>">
-		                            	<?php 
-		                            		if (wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()))) { ?>
-		                            			<img width="200" height="150" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="<?php the_title(); ?>">
-		                            		<?php } else { ?>
-		                            			<img width="200" height="150" src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-thumb.jpg" alt="<?php the_title(); ?>">
-		                            		<?php }
-		                            	?>		                               
+		                            	<?php echo showThumnail('200', '150'); ?>                               
 		                            </a>
 		                        </div>
 		                        <div class="news-info">
