@@ -189,3 +189,8 @@ function remove_pages_from_search() {
     $wp_post_types['page']->exclude_from_search = true;
 }
 add_action('init', 'remove_pages_from_search');
+
+/* REMOVE ADD TO CART SCROLL PAGE */
+add_filter( 'theme_mod_storefront_product_pagination', '__return_false');
+//turn off sticky add to cart
+add_filter( 'theme_mod_storefront_sticky_add_to_cart', '__return_false',9999);
