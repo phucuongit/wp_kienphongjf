@@ -185,12 +185,12 @@ body {
     padding: 10px;
 }
 .vert {
-    height: 800px;
+    height: 100%;
     padding: 10px 0;
     overflow: hidden;
 }
 .vert .simply-scroll-clip {
-    height: 800px;
+    height: 100%;
 }
 .simply-scroll-list {
     overflow: hidden;

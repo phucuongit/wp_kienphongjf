@@ -5,6 +5,8 @@ include dirname(__FILE__) . '/inc/WPDocs_Walker_Nav_Menu.php';
 include dirname(__FILE__) . '/inc/widgets/hotlineWidget.php';
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
+define('BASE_URL_CONTACT', site_url().'/lien-he', TRUE);
+
 function enqueue_parent_styles() {
     $parent_style = 'parent-style';
 

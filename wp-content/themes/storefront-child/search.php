@@ -31,7 +31,9 @@
 										     	<h2 class="product_name"><?php the_title();?></h2>
 										    </a>
 									        <p class="product-des"><?php echo teaser(30); ?></p>
-									        <p class="product_price">Call</p>
+									        <a href="<?php echo BASE_URL_CONTACT; ?>">
+									        	<p class="product_price">Call</p>
+									        </a>									        
 										    <a href="<?php echo get_permalink(); ?>" class="view-more" title="<?php the_title();?>">Details</a>
 										</div>
 					            	</div>
