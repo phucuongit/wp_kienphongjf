@@ -363,3 +363,11 @@ body {
     color: #CE1010;
     text-decoration: none;
 }
+/* MENU SUBMENU HOVER */
+#menu-main-menu.navbar-nav li.nav-item ul.sub-menu li:hover>a {
+    background-color: #0babc8;
+}
+#menu-main-menu.navbar-nav li.nav-item:hover > a {
+    color: #002d69;
+    text-decoration: none;
+}
