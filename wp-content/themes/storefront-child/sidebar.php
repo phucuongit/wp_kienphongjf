@@ -23,8 +23,8 @@ dynamic_sidebar( 'sidebar_left' );
         <div class="vert simply-scroll-container">
             <div class="simply-scroll-clip">
                 <div class="simply-scroll-list">
-                    <!-- <div class="owl-carousel owl-theme sidebar-product"> -->
-                        <ul id="list-product-hot" class="simply-scroll-list">
+                    <!-- <div class="owl-carousel owl-theme sidebar-product"> -->                        
+                        <ul id="list-product-hot" class="simply-scroll-list">                            
                             <?php
                             $args = array(
                                 'post_type' => 'product',
@@ -40,8 +40,9 @@ dynamic_sidebar( 'sidebar_left' );
                             $loop = new WP_Query( $args );
                             if ( $loop->have_posts() ) {
                                 while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                    
                                     <li>
-                                        <div class="item">
+                                        
                                             <div class="item-scroll">
                                                 <div class="product-item">
                                                     <div class="product-image">
@@ -59,16 +60,17 @@ dynamic_sidebar( 'sidebar_left' );
                                                     <a href="<?php echo get_permalink(); ?>" class="view-more" title="<?php the_title();?>">Details</a>
                                                 </div>
                                             </div>
-                                        </div>
+                                        
                                     </li>
+                                    
                             <?php
                                 endwhile;
                             } else {
                                 echo __( 'No products found' );
                             }
                             wp_reset_postdata();
-                            ?>
-                        </ul>
+                            ?>                            
+                        </ul>                      
                     <!-- </div> -->
                 </div>
             </div>
