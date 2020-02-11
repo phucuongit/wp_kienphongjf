@@ -371,3 +371,12 @@ body {
     color: #002d69;
     text-decoration: none;
 }
+/* CHI TIẾT SẢN PHẨM */
+.archive .product_image img {
+    height: 215px;
+}
+.product-des {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
