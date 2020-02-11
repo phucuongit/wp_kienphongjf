@@ -26,6 +26,7 @@ button:focus {
 .storefront-products-bycategory {
 
     a.woocommerce-loop-product__link {
+        display: inline-block;
         &:hover {
             text-decoration: none;
         }
@@ -141,6 +142,43 @@ ul.products li.product a.woocommerce-LoopProduct-link {
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 0px;
+}
+.product.type-product{
+    width: auto!important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    padding: 5px;
+    border-radius: 3px;
+    margin: 10px!important;
+    a{
+        
+        .woocommerce-loop-product__title{
+    
+            font-size: 16px!important;
+            margin-bottom: 5px!important;
+            width: 233px;
+            color: #003e70;
+            line-height: 22px;
+            padding: 5px 0;
+            min-height: 45px;
+            text-align: center;
+        }
+        .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{
+            width: 233px;
+        }
+        .woocommerce-LoopProduct-link.woocommerce-loop-product__link{
+            display: block;
+        }
+       
+    }
+    
+} 
+.woocommerce-LoopProduct-link.cta-contact{
+    display: inline-block!important;
+}
+.view-more:hover {
+    background-color: #a0d468;
+    text-decoration: none;
+    color: white;
 }
 /*
     CSS BLOCK PANEL
@@ -320,15 +358,7 @@ ul.products li.product a.woocommerce-LoopProduct-link {
     text-decoration: none;
 }
 
-.price--button {
-    background-color: #DB2828;
-    padding: 8px 20px;
-    border-radius: 5px;
-    font-weight: normal;
-    color: #FFF;
-    font-family: arial;
-    font-size: 20px;
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-top: 10px;
+.list-products{
+    display: flex;
+    list-style: none;
 }
