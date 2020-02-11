@@ -44,13 +44,13 @@ $(document).ready(function() {
         loop:true,
         responsive: {
             0: {
-                items:1
+                items:3
             },
             480: {
-                items:1
+                items:3
             },
             768: {
-                items:1
+                items:3
             },
             991: {
                 items:1
