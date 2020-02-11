@@ -371,7 +371,7 @@ body {
     color: #002d69;
     text-decoration: none;
 }
-/* CHI TIẾT SẢN PHẨM */
+/* DANH MỤC SẢN PHẨM */
 .archive .product_image img {
     height: 215px;
 }
@@ -379,4 +379,11 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.product_item a:hover {
+    text-decoration: none;
+}
+.view-more:hover {
+    background-color: #a0d468;
+    color: #fff;
 }
