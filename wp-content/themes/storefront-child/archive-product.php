@@ -22,7 +22,9 @@
 
                         endwhile;
                     } ?>
+
                 </div>
+                <?php wp_corenavi_table();?>
             </div>
         </div>
     </div>

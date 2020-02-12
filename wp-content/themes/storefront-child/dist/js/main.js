@@ -31,3 +31,35 @@
 })(jQuery);
 
 
+$(document).ready(function() {
+    $(".sidebar-product").owlCarousel({
+        autoplay:false,
+        nav : true, 
+        dots: false,
+        autoplaySpeed : 500,
+        navSpeed : 500,
+        dotsSpeed : 500,
+        autoplayHoverPause: true,
+        margin:20,
+        items : 3,
+        loop:true,
+        responsive: {
+            0: {
+                items:3
+            },
+            480: {
+                items:3
+            },
+            768: {
+                items:3
+            },
+            991: {
+                items:1
+            },
+            
+            1200: {
+                items:1
+            },
+        },
+    });
+})

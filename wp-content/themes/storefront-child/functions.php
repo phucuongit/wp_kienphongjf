@@ -5,6 +5,8 @@ include dirname(__FILE__) . '/inc/WPDocs_Walker_Nav_Menu.php';
 include dirname(__FILE__) . '/inc/widgets/hotlineWidget.php';
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
 
+define('BASE_URL_CONTACT', site_url().'/lien-he', TRUE);
+
 function enqueue_parent_styles() {
     $parent_style = 'parent-style';
 
@@ -222,6 +224,12 @@ function remove_pages_from_search() {
 }
 add_action('init', 'remove_pages_from_search');
 
+
+/* REMOVE ADD TO CART SCROLL PAGE */
+add_filter( 'theme_mod_storefront_product_pagination', '__return_false');
+//turn off sticky add to cart
+add_filter( 'theme_mod_storefront_sticky_add_to_cart', '__return_false',9999);
+
 /**
  * Change number of related products output
  */ 
@@ -230,4 +238,62 @@ add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_arg
 	$args['posts_per_page'] = 8; // 4 related products
 	$args['columns'] = 4; // arranged in 2 columns
 	return $args;
+}
+
+/* THIẾT LẬP THEME OPTIONS */
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Thiết lập giao diện', 
+		'menu_title'	=> 'Thiết lập giao diện', 
+		'menu_slug' 	=> 'theme-settings', 
+		'capability'	=> 'edit_posts',
+		'redirect'	=> false
+	));
+}
+
+/* SỬ DỤNG STMP GMAIL */
+add_action( 'phpmailer_init', function( $phpmailer ) {
+    $contentText = get_field('kp_from_name_text_gmail','option');
+    $userName = get_field('kp_username_gmail','option');
+    $passWord = get_field('kp_password_app_gmail','option');
+    if ( !is_object( $phpmailer ) )
+    $phpmailer = (object) $phpmailer;
+    $phpmailer->Mailer     = 'smtp';
+    $phpmailer->Host       = 'smtp.gmail.com';
+    $phpmailer->SMTPAuth   = 1;
+    $phpmailer->Port       = 587;
+    $phpmailer->Username   = ''.$userName.'';
+    $phpmailer->Password   = ''.$passWord.'';
+    $phpmailer->SMTPSecure = 'TLS';
+    $phpmailer->From       = ''.$userName.'';
+    $phpmailer->FromName   = ''.$contentText.'';
+});
+
+/* THÊM HÌNH ẢNH SẢN PHẨM VÀO FORM GỬI MAIL */
+add_filter( 'woocommerce_email_order_items_args', 'iconic_email_order_items_args', 10, 1 );
+function iconic_email_order_items_args( $args ) {
+    $args['show_image'] = true;
+    return $args;
+}
+
+/* THEME OPTIONS INFOMATION COMPANMY - ADDRESS ...*/
+function createACCompany($lang) {
+	$company = get_field('kp_company_'. $lang,'option');
+	return $company;
+}
+
+function createACAddress($lang) {
+	$address = get_field('kp_address_'. $lang,'option');
+	return $address;
+}
+
+function createACEmail() {
+	$email = get_field('kp_email','option');
+	return $email;
+}
+
+function createACPhone() {
+	$phone = get_field('kp_phone','option');
+	return $phone;
 }

@@ -18,7 +18,7 @@
 		                            	<?php echo showThumnail('200', '150'); ?>                               
 		                            </a>
 		                        </div>
-		                        <div class="news-info">
+		                        <div class="news-info col-md-9">
 		                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 		                                <h2 class="news-name"><?php the_title(); ?></h2>
 		                            </a>
