@@ -24,8 +24,16 @@
 
     <footer id="footer">
         <div class="container">
-            <p class="mb-0 mt-2">NS VINA IMPORT EXPORT TRADING MANUFACTURING COMPANYLIMITED</p>
-            <p class="pb-5">Address : 24-26 Vu Huy Tan Street, 3 ward , Binh Thanh District, HCM City, VietNam</p>
+            <?php 
+                $current_lang = pll_current_language('locale');
+                if($current_lang == 'vi'): ?>
+                    <p class="mb-0 mt-2">CÔNG TY TNHH SẢN XUẤT XUẤT NHẬP KHẨU NS</p>
+                    <p class="pb-5">Địa chỉ : 24-26 Vu Huy Tan, 3, Quận Binh Thanh, TP HCM, Việt Nam</p>
+                <?php else: ?>
+                    <p class="mb-0 mt-2">NS VINA IMPORT EXPORT TRADING MANUFACTURING COMPANYLIMITED</p>
+                    <p class="pb-5">Address : 24-26 Vu Huy Tan Street, 3 ward , Binh Thanh District, HCM City, VietNam</p>
+                <?php endif; ?>
+        
         </div>
     </footer>
 
