@@ -24,3 +24,5 @@ Stack trace:
 
 2020-02-12T16:23:42+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\archive-product.php on line 23
 
+2020-02-12T17:24:48+00:00 CRITICAL Call to undefined function createACCompanyVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 30
+
