@@ -175,6 +175,9 @@ body {
     line-height: 30px;
 }
 #support-online .account:first-child{padding-bottom:0px}
+.widget_support_online {
+    margin: 0px;
+}
 /***SẢN PHẨM PHỔ BIẾN **/
 #list-product-hot img {
     width: 100%;
@@ -391,6 +394,20 @@ body {
     background-color: #a0d468;
     color: #fff;
 }
+/* HOME */
+.page-template-template-homepage:not(.has-post-thumbnail) .site-main {
+    padding-top: 0px;
+}
+/* BREADCRUMB */
+@media (min-width: 768px) {
+    .storefront-breadcrumb {
+        margin: 0;
+    }
+}
+.woocommerce-breadcrumb {
+    font-size: 14px;
+}
+
 
 /* MOBILE */
 @media (max-width:767px){
@@ -410,5 +427,47 @@ body {
     }
     .home .content-area .site-main {
         padding-top: 10px;
+    }
+    .lang-item img {
+        margin-bottom: 10px;
+    }
+    .news-list-content-right {
+        width: 100%;
+    }
+}
+
+@media (max-width : 320px) {
+    .product.type-product {
+        margin: 0px;
+    }
+    .container .col-lg-9, .container .col-lg-3 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .panel-header {
+        font-size: 16px;
+    }
+}
+
+/* IPAD */
+@media (max-width: 992px) and (min-width: 767px) {
+    .navbar-toggler {
+        height: 60px;
+        line-height: 60px;
+        outline: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 60px;      
+    }
+    
+
+    .page-template-template-homepage-php .site-main ul.products.columns-4 li.product {
+        width: 47% !important;
+    }
+
+    .lang-item img {
+        margin-bottom: 10px;
     }
 }
