@@ -279,23 +279,13 @@ function iconic_email_order_items_args( $args ) {
 
 /* THEME OPTIONS INFOMATION COMPANMY - ADDRESS ...*/
 function createACCompanyVN() {
-	$companyVN = get_field('kp_company_vi','option');
-	return $companyVN;
+	$company = get_field('kp_company','option');
+	return $company;
 }
 
-function createACCompanyEN() {
-	$companyEN = get_field('kp_company_en_us','option');
-	return $companyEN;
-}
-
-function createACAddressVN() {
-	$addressVN = get_field('kp_address_vi','option');
-	return $addressVN;
-}
-
-function createACAddressEN() {
-	$addressEN = get_field('kp_address_en_us','option');
-	return $addressEN;
+function createACAddress() {
+	$address = get_field('kp_address','option');
+	return $address;
 }
 
 function createACEmail() {
