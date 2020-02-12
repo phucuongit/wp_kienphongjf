@@ -25,8 +25,6 @@
                         <div class="notice errors">No Product(s) matched</div>
                     <?php } ?>
 
-                    } ?>
-
                 </div>
                 <?php wp_corenavi_table(); ?>
             </div>
