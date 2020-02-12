@@ -7,7 +7,7 @@
     <div class="news-list-content-left news-list col-lg-9 col-md-12">
 
         <div class="panel">
-            <h1 class="news-panel-header">TIN TỨC</h1>
+            <h1 class="news-panel-header" style="text-transform: uppercase"><?php  single_cat_title() ?></h1>
             <div class="news-panel-content news-panel-body">
                 <div class="news-panel-body">
 					<?php if (have_posts()) : ?>
