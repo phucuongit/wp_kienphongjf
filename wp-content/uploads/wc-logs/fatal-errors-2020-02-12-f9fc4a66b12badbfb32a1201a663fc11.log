@@ -22,3 +22,5 @@ Stack trace:
 #7 {main}
   thrown in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\header.php on line 50
 
+2020-02-12T16:23:42+00:00 CRITICAL syntax error, unexpected '?>' in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\archive-product.php on line 23
+

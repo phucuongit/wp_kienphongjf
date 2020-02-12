@@ -24,8 +24,16 @@
 
     <footer id="footer">
         <div class="container">
-            <p class="mb-0 mt-2"><?php echo createACCompany(); ?></p>
-            <p class="pb-5">Địa chỉ: <?php echo createACAddress(); ?></p>
+            <?php 
+                $current_lang = pll_current_language('locale');
+                if($current_lang == 'vi'): ?>
+                    <p class="mb-0 mt-2"><?php echo createACCompanyVN(); ?></p>
+                    <p class="pb-5">Địa chỉ: <?php echo createACAddressVN(); ?></p>
+                <?php else: ?>
+                    <p class="mb-0 mt-2"><?php echo createACCompanyEN(); ?></p>
+                    <p class="pb-5">Address : <?php echo createACAddressEN(); ?></p>
+                <?php endif; ?>
+    
         </div>
     </footer>
 
