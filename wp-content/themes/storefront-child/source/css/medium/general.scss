@@ -243,7 +243,7 @@ ul.products li.product a.woocommerce-LoopProduct-link {
     padding-top: 0px;
 }
 
-#menu-main-menu.navbar-nav {
+#menu-main-menu.navbar-nav, #menu-main-menu-vi.navbar-nav {
 
     li.nav-item {
 
@@ -361,4 +361,12 @@ ul.products li.product a.woocommerce-LoopProduct-link {
 .list-products{
     display: flex;
     list-style: none;
+}
+.lang-item{
+    display: flex;
+    align-items: center;
+    img{
+        width: 25px;
+        height: 25px;
+    }
 }

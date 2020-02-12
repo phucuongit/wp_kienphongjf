@@ -26,58 +26,60 @@ if(!function_exists('storefront_product_by_cateogry')){
     function storefront_product_by_cateogry(){
 		$term = get_queried_object();
 		$array_category = get_field('category', $term);
-		
-		foreach($array_category as $key => $cat_id){
-			$term = get_term_by( 'id', $cat_id, 'product_cat' );
-			$args = array(
-				'post_type'	=> 'product',
-				'posts_per_page'	=> 4,
-				'order'	=> 'DESC',
-				'orderby'	=> 'date', 
-				'product_cat' => $term->slug,
-				// 'tax_query' => array(
-				// 	'taxonomy'      => 'product_cat',
-				// 	'field' => 'term_id', //This is optional, as it defaults to 'term_id'
-				// 	'terms'         =>  $cat_id,
-				// 	// 'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
-				// ),
-			);
-		
-			$products = new WP_Query($args);
+		if(isset($array_category)){
+			foreach($array_category as $key => $cat_id){
+				$term = get_term_by( 'id', $cat_id, 'product_cat' );
+				$args = array(
+					'post_type'	=> 'product',
+					'posts_per_page'	=> 4,
+					'order'	=> 'DESC',
+					'orderby'	=> 'date', 
+					'product_cat' => $term->slug,
+					// 'tax_query' => array(
+					// 	'taxonomy'      => 'product_cat',
+					// 	'field' => 'term_id', //This is optional, as it defaults to 'term_id'
+					// 	'terms'         =>  $cat_id,
+					// 	// 'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+					// ),
+				);
 			
-			// echo '<pre>';
-			// var_dump($products);
-
-				/**
-				 * Only display the section if the shortcode returns products
-				 */
+				$products = new WP_Query($args);
 				
-				echo '<section class="storefront-product-section storefront-products-bycategory" aria-label="' . esc_attr__( 'Custome Products', 'storefront' ) . '">';
-
-				do_action( 'storefront_homepage_before_featured_products' );
-				if( $term ){
-					echo '<h2 class="panel-header-pagehome">' . $term->name . '</h2>';
-				}
-				
-				echo '<div class="list-products">';
-				do_action( 'storefront_homepage_after_featured_products_title' );
-				
-				if($products->have_posts()){
-					 woocommerce_product_loop_start(); 
-					while($products->have_posts()) : $products->the_post();
-						wc_get_template_part( 'content', 'product' );
-					endwhile;
-					woocommerce_product_loop_end();
-				}else{
-					echo __('No products found');
-				}
-				
-
-				do_action( 'storefront_homepage_after_featured_products' );
-				echo '</div>';
-				echo '</section>';
-				wp_reset_postdata();
+				// echo '<pre>';
+				// var_dump($products);
+	
+					/**
+					 * Only display the section if the shortcode returns products
+					 */
+					
+					echo '<section class="storefront-product-section storefront-products-bycategory" aria-label="' . esc_attr__( 'Custome Products', 'storefront' ) . '">';
+	
+					do_action( 'storefront_homepage_before_featured_products' );
+					if( $term ){
+						echo '<h2 class="panel-header-pagehome">' . $term->name . '</h2>';
+					}
+					
+					echo '<div class="list-products">';
+					do_action( 'storefront_homepage_after_featured_products_title' );
+					
+					if($products->have_posts()){
+						 woocommerce_product_loop_start(); 
+						while($products->have_posts()) : $products->the_post();
+							wc_get_template_part( 'content', 'product' );
+						endwhile;
+						woocommerce_product_loop_end();
+					}else{
+						echo __('No products found');
+					}
+					
+	
+					do_action( 'storefront_homepage_after_featured_products' );
+					echo '</div>';
+					echo '</section>';
+					wp_reset_postdata();
+			}
 		}
+		
     }
     add_action('homepage', 'storefront_product_by_cateogry', 20);
 }

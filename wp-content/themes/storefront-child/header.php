@@ -47,6 +47,11 @@
 								'theme_location'	=> 'primary',
 								'walker'	=> new WPDocs_Walker_Nav_Menu(),
 							) );
+							// pll_the_languages(array(
+							// 		'show_flags'	=> 1,
+							// 		'hide_if_empty'	=> 0,
+							// 		'show_names'	=> 0
+							// ));
 						?>
 						
 					</div>
