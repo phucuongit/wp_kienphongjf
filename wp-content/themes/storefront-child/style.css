@@ -407,7 +407,9 @@ body {
 .woocommerce-breadcrumb {
     font-size: 14px;
 }
-
+.woocommerce-breadcrumb a {
+    text-decoration: none;
+}
 
 /* MOBILE */
 @media (max-width:767px){
