@@ -58,7 +58,7 @@ function my_dynamic_sidebar_params($params)
 
 
     $params[0]['after_widget'] .=  '<div id="support-online" class="hero-panel">
-                    <h3 class="panel-header"><i class="fas fa-comments"></i>Hỗ trợ trực tuyến</h3>
+                    <h3 class="panel-header"><i class="fas fa-comments"></i>'.get_field('title', 'widget_' . $widget_id).'</h3>
                 <div class="panel-body">';
     while (the_flexible_field("contact", 'widget_' . $widget_id)) :
         if (get_row_layout() == 'new_contact') :

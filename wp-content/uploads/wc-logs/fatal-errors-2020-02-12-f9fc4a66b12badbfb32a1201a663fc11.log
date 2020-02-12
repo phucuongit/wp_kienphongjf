@@ -1,0 +1,24 @@
+2020-02-12T02:42:50+00:00 CRITICAL Uncaught Error: Call to undefined function pll_the_language() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\header.php:50
+Stack trace:
+#0 C:\xampp\htdocs\kienphongjf\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\kienphongjf\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\kienphongjf\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\index.php(15): get_header()
+#4 C:\xampp\htdocs\kienphongjf\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\kienphongjf\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\kienphongjf\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\header.php on line 50
+
+2020-02-12T03:00:04+00:00 CRITICAL Uncaught Error: Call to undefined function pll_the_language() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\header.php:50
+Stack trace:
+#0 C:\xampp\htdocs\kienphongjf\wp-includes\template.php(722): require_once()
+#1 C:\xampp\htdocs\kienphongjf\wp-includes\template.php(671): load_template('C:\\xampp\\htdocs...', true)
+#2 C:\xampp\htdocs\kienphongjf\wp-includes\general-template.php(41): locate_template(Array, true)
+#3 C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\index.php(15): get_header()
+#4 C:\xampp\htdocs\kienphongjf\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\kienphongjf\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\kienphongjf\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\header.php on line 50
+
