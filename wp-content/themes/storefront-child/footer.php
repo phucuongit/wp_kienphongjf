@@ -24,8 +24,8 @@
 
     <footer id="footer">
         <div class="container">
-            <p class="mb-0 mt-2">NS VINA IMPORT EXPORT TRADING MANUFACTURING COMPANYLIMITED</p>
-            <p class="pb-5">Address : 24-26 Vu Huy Tan Street, 3 ward , Binh Thanh District, HCM City, VietNam</p>
+            <p class="mb-0 mt-2"><?php echo createACCompany(); ?></p>
+            <p class="pb-5">Địa chỉ: <?php echo createACAddress(); ?></p>
         </div>
     </footer>
 
