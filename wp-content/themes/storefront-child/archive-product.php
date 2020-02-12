@@ -12,7 +12,7 @@
                 <div class="search-panel-body">
                     <?php
                     if (have_posts()) { ?>
-                    <?php
+                        <?php
                         while (have_posts()) : the_post();
                             woocommerce_product_loop_start();
 
@@ -21,10 +21,14 @@
                             woocommerce_product_loop_start();
 
                         endwhile;
+                    } else { ?>
+                        <div class="notice errors">No Product(s) matched</div>
+                    <?php } ?>
+
                     } ?>
 
                 </div>
-                <?php wp_corenavi_table();?>
+                <?php wp_corenavi_table(); ?>
             </div>
         </div>
     </div>
