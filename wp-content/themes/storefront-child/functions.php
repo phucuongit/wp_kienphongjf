@@ -112,13 +112,24 @@ unset($tabs['reviews']); 					// Remove Reviews tab
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
 function add_inquiry_link_instead_price( $price, $product ) {
-	// var_dump($product);
-    if ( '' === $product->get_price() || 0 == $product->get_price() || $product->get_price()) :
-		$output = '<a class="woocommerce-LoopProduct-link cta-contact" href="'.site_url().'/lien-he/"><p class="product-price">Call</p></a>';
-		if(!is_product()) $output .= '<a href="product/'.$product->get_slug().'" class="view-more" title="">Details</a>';
+	$current_lang = pll_current_language('locale');
+	if($current_lang == 'en_US'){
+		if ( '' === $product->get_price() || 0 == $product->get_price() || $product->get_price()) :
+			$output = '<a class="woocommerce-LoopProduct-link cta-contact" href="'.site_url().'/lien-he/"><p class="product-price">Call</p></a>';
+			if(!is_product()) $output .= '<a href="product/'.$product->get_slug().'" class="view-more" title="">Detail</a>';
+			
+			return $output;
+		endif;
+
+	}else if($current_lang == 'vi'){
+		if ( '' === $product->get_price() || 0 == $product->get_price() || $product->get_price()) :
+			$output = '<a class="woocommerce-LoopProduct-link cta-contact" href="'.site_url().'/lien-he/"><p class="product-price">Liên hệ</p></a>';
+			if(!is_product()) $output .= '<a href="product/'.$product->get_slug().'" class="view-more" title="">Chi tiết</a>';
+			
+			return $output;
+		endif;
+	}
 		
-		return $output;
-    endif;
 }
 add_filter( 'woocommerce_get_price_html', 'add_inquiry_link_instead_price', 100, 2 );
 
