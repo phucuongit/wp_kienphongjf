@@ -18,7 +18,18 @@ dynamic_sidebar( 'sidebar_left' );
 ?>
 
 <div class="hero-panel">
-<h3 class="panel-header"><i class="fa fa-barcode"></i>Featured products</h3>
+<h3 class="panel-header">
+    <i class="fa fa-barcode"></i>
+    <?php 
+        $current_lang = pll_current_language('locale');
+        if($current_lang == 'en_US'){ ?>
+            Featured products
+        <?php } else { ?>
+            Sản phẩm phổ biến
+        <?php }
+    ?>
+    
+</h3>
 <div class="panel-body padding5">
     <div class="vert simply-scroll-container">
         <div class="simply-scroll-clip">
@@ -54,9 +65,25 @@ dynamic_sidebar( 'sidebar_left' );
                                                 </a>
                                                 <p class="product-des"><?php echo teaser(30); ?></p>
                                                 <a href="<?php echo BASE_URL_CONTACT; ?>">
-                                                    <p class="product-price">Call</p>
+                                                    <p class="product-price">
+                                                        <?php 
+                                                            if($current_lang == 'en_US'){ ?>
+                                                                Call
+                                                            <?php } else { ?>
+                                                                Liên hệ
+                                                            <?php }
+                                                        ?>
+                                                    </p>
                                                 </a>
-                                                <a href="<?php echo get_permalink(); ?>" class="view-more" title="<?php the_title();?>">Details</a>
+                                                <a href="<?php echo get_permalink(); ?>" class="view-more" title="<?php the_title();?>">
+                                                    <?php 
+                                                            if($current_lang == 'en_US'){ ?>
+                                                                Details
+                                                            <?php } else { ?>
+                                                                Chi tiết
+                                                            <?php }
+                                                        ?>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -64,7 +91,12 @@ dynamic_sidebar( 'sidebar_left' );
                         <?php
                             endwhile;
                         } else {
-                            echo __( 'No products found' );
+                            if($current_lang == 'en_US'){ ?>
+                                No products found
+                            <?php } else { ?>
+                                Không có sản phẩm
+                            <?php }
+                            
                         }
                         wp_reset_postdata();
                         ?>

@@ -26,3 +26,19 @@ Stack trace:
 
 2020-02-12T17:24:48+00:00 CRITICAL Call to undefined function createACCompanyVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 30
 
+2020-02-12T17:34:26+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
+2020-02-12T17:36:54+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
+2020-02-12T17:39:05+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
+2020-02-12T17:40:57+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
+2020-02-12T17:42:13+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
+2020-02-12T17:43:55+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
+2020-02-12T17:45:57+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
+2020-02-12T17:46:14+00:00 CRITICAL Call to undefined function createACAddressVN() in C:\xampp\htdocs\kienphongjf\wp-content\themes\storefront-child\footer.php on line 31
+
