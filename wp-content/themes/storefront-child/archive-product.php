@@ -13,14 +13,16 @@
                     <?php
                     if (have_posts()) { ?>
                     <?php
+                    woocommerce_product_loop_start();
                         while (have_posts()) : the_post();
-                            woocommerce_product_loop_start();
+                            
 
                             wc_get_template_part('content', 'product');
 
-                            woocommerce_product_loop_start();
+                            
 
                         endwhile;
+                    woocommerce_product_loop_end();
                     } ?>
 
                 </div>

@@ -4,28 +4,18 @@ add_action( 'homeSlide', 'create_slider', 10 );
 
 if(!function_exists('create_slider')){
     function create_slider(){
-        echo '<div class="owl-carousel owl-theme">
-                <div class="item">
+        $images = get_field('image_slide');
+        $output='<div class="owl-carousel owl-theme">';
+        if(isset($images)){
+            foreach($images as $image){
+                $output .= '<div class="item">
                     <div class="slide-item">
-                        <img src="'.get_stylesheet_directory_uri().'/img/slide1.png"/> 
+                        <img src="'.esc_url($image['url']).'"/> 
                     </div>
-                </div>
-                <div class="item">
-                    <div class="slide-item">
-                        <img src="'.get_stylesheet_directory_uri().'/img/slide2.png"/> 
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="slide-item">
-                        <img src="'.get_stylesheet_directory_uri().'/img/slide3.png"/> 
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="slide-item">
-                        <img src="'.get_stylesheet_directory_uri().'/img/slide4.png"/> 
-                    </div>
-                </div>
-       
-    </div>';
+                </div>';
+            }
+        };
+        $output .= '</div>';
+       echo $output;
     }
 }
