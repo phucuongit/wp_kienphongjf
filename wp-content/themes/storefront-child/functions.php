@@ -20,10 +20,20 @@ function enqueue_parent_styles() {
 	
 	wp_enqueue_script( 'boostrap-js', get_stylesheet_directory_uri() . '/dist/js/bootstrap.min.js', array('jquery'), wp_get_theme()->get('Version'));
 	wp_enqueue_script( 'owl-carousel-js', get_stylesheet_directory_uri() . '/dist/js/owl.carousel.min.js', array('jquery'), wp_get_theme()->get('Version'));
+	wp_enqueue_script( 'simply-scroll-js', 'https://cdn.jsdelivr.net/simplyscroll/2/jquery.simplyscroll.min.js', array('jquery'), wp_get_theme()->get('Version'));
 	
 	wp_enqueue_script( 'main-js', get_stylesheet_directory_uri() . '/dist/js/main.js', array('jquery'), wp_get_theme()->get('Version'));
 
 }
+function themename_custom_logo_setup() {
+	$defaults = array(
+		'height'	=> 50,
+		'width'       => 50,
+		'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
+   }
+add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
 if(!function_exists('storefront_product_by_cateogry')){
     function storefront_product_by_cateogry(){
 		$term = get_queried_object();
@@ -37,12 +47,6 @@ if(!function_exists('storefront_product_by_cateogry')){
 					'order'	=> 'DESC',
 					'orderby'	=> 'date', 
 					'product_cat' => $term->slug,
-					// 'tax_query' => array(
-					// 	'taxonomy'      => 'product_cat',
-					// 	'field' => 'term_id', //This is optional, as it defaults to 'term_id'
-					// 	'terms'         =>  $cat_id,
-					// 	// 'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
-					// ),
 				);
 			
 				$products = new WP_Query($args);

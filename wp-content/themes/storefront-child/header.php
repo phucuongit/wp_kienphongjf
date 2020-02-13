@@ -32,8 +32,18 @@
 			<div class="container row">
 				<nav class="nav navbar-expand-lg navbar-light col-12">
 					<a class="navbar-brand" href="<?php echo site_url() ?>">
-						<img class="logo-nav" src="http://nsvn.vn/upload/header/nsvinaimpex.png" alt="NS VINA IMPEX CO LTD" width="50">	
-						<span class="title-nav">Kien Phong JF</span>
+						<?php 
+							$custom_logo_id = get_theme_mod( 'custom_logo' );
+							$logo = wp_get_attachment_image_src( $custom_logo_id );
+							if ( has_custom_logo() ) {
+								echo '<img class="logo-nav" src="'.esc_url($logo[0]).'" alt="' . get_bloginfo( 'name' ) . '" width="50">';
+								echo '<span class="title-nav">'.get_bloginfo( 'name' ).'</span>';
+							} else {
+									echo '<span class="title-nav">'.get_bloginfo( 'name' ).'</span>';
+							}
+						?>
+							
+						
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
@@ -47,11 +57,7 @@
 								'theme_location'	=> 'primary',
 								'walker'	=> new WPDocs_Walker_Nav_Menu(),
 							) );
-							// pll_the_languages(array(
-							// 		'show_flags'	=> 1,
-							// 		'hide_if_empty'	=> 0,
-							// 		'show_names'	=> 0
-							// ));
+							
 						?>
 						
 					</div>

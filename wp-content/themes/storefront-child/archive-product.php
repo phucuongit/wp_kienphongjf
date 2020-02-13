@@ -11,19 +11,20 @@
             <div class="news-panel-content news-panel-body">
                 <div class="search-panel-body">
                     <?php
-                    if (have_posts()) { ?>
-                        <?php
-                        while (have_posts()) : the_post();
-                            woocommerce_product_loop_start();
+                    if (have_posts()) { 
 
+                        woocommerce_product_loop_start();
+
+                        while (have_posts()) : the_post();
+                            
                             wc_get_template_part('content', 'product');
 
-                            woocommerce_product_loop_start();
-
                         endwhile;
+                        woocommerce_product_loop_end();
                     } else { ?>
                         <div class="notice errors">No Product(s) matched</div>
                     <?php } ?>
+
 
                 </div>
                 <?php wp_corenavi_table(); ?>
