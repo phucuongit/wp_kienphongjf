@@ -6,29 +6,24 @@ if (!is_active_sidebar('sidebar_left')) {
 <div id="search-panel">
     <div class="panel-body">
         <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-            <input type="text" name="s" value="" placeholder="Nhập từ khóa tìm kiếm...">
+            <?php 
+                $result = changeTextContentLanguagePolyLang('Enter keyword...', 'Nhập từ khóa tìm kiếm...');
+            ?>
+            <input type="text" name="s" value="" placeholder="<?php echo $result; ?>">
             <button type="submit" title="Tìm sản phẩm"><i class="fa fa-search" aria-hidden="true"></i></button>
-            <!-- <input type="hidden" name="post_type" value="product"> -->
         </form>
     </div>
 </div>
-<?php
-dynamic_sidebar('sidebar_left');
-?>
-
+<?php dynamic_sidebar('sidebar_left'); ?>
 <div class="hero-panel">
     <h3 class="panel-header"><i class="fa fa-barcode"></i>
-    <?php $current_lang = pll_current_language('locale');
-	if($current_lang == 'en_US'){
-       echo 'Featured products';
-    }else{
-        echo 'Sản phẩm đặc trưng';
-    }
-    ?>
-       </h3>
+        <?php 
+            $result = changeTextContentLanguagePolyLang('Featured products', 'Sản phẩm đặc trưng');
+            echo $result;
+        ?>
+    </h3>
     <div class="panel-body padding5">
-        
-            <?php
+        <?php
             $args = array(
                 'post_type' => 'product',
                 'posts_per_page' => 8,
@@ -44,17 +39,14 @@ dynamic_sidebar('sidebar_left');
             if ($loop->have_posts()) {
                 woocommerce_product_loop_start();
                 while ($loop->have_posts()) : $loop->the_post(); 
-                
-
                     wc_get_template_part('content', 'product');
-
                 endwhile;
                 woocommerce_product_loop_end();
             } else {
-                echo __('No products found');
+                $result = changeTextContentLanguagePolyLang('No products found', 'Không tìm thấy sản phẩm');
+                echo $result;
             }
             wp_reset_postdata();
-            ?>
-
+        ?>
     </div>
 </div>

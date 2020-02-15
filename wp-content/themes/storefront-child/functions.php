@@ -301,3 +301,16 @@ function createACPhone() {
 	$phone = get_field('kp_phone','option');
 	return $phone;
 }
+
+/* FUNTIONS CHANGE LANGUAGE POLOLANG */
+function changeTextContentLanguagePolyLang($contentFirst, $contentLast){
+	$result = '';
+	$currentLanguage = pll_current_language('locale');
+	if($currentLanguage == 'en_US') {
+		$result.= $contentFirst;
+	}else if ($currentLanguage == 'vi') {
+		$result.= $contentLast;
+	}
+	return $result;
+}
+
